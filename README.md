@@ -3,6 +3,10 @@
 TaskTracker is a simple yet powerful todo application built with FastAPI. It allows users to create, retrieve, update,
 and delete tasks. The application also supports form data submission and renders HTML templates for displaying tasks.
 
+![Screenshot.png](Screenshot.png)
+
+![img.png](img.png)
+
 ### Prerequisites
 
 - Python 3.7+
@@ -83,15 +87,20 @@ tasktracker/
 - Uvicorn
 - Jinja2
 
-Install dependencies using:
+To Build the Docker Image:
 
 ```bash
-pip install fastapi pydantic uvicorn jinja2
+docker build -t tasktracker:latest .
 ```
 
-## License
+To Run the Docker Container
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+```bash
+docker run -d -p 8080:8080 tasktracker:latest
+```
+
+then You can run it from Docker (make sure that Docker installed and works before running these
+commands![img.png](img.png))
 
 ## Acknowledgments
 
